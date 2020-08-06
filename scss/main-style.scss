@@ -1,0 +1,19 @@
+html, body {
+    font-family: sans-serif;
+}
+body {
+    // height: 2000px;
+    margin: 15px;
+    font-size: 1rem;
+    background-color: rgb(228, 228, 228);
+}
+
+canvas {
+    border: 1px solid #000;
+}
+
+.canvas_1 {
+    width: 600px;
+    height: 250px;
+    background-color: #ede8ff;
+}

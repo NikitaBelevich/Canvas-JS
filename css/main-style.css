@@ -1,0 +1,19 @@
+html, body {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 15px;
+  font-size: 1rem;
+  background-color: #e4e4e4;
+}
+
+canvas {
+  border: 1px solid #000;
+}
+
+.canvas_1 {
+  width: 600px;
+  height: 250px;
+  background-color: #ede8ff;
+}
