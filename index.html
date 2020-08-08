@@ -17,10 +17,48 @@
     <div>
         <p>Task 1. Разработайте интерфейс, в котором пользователь может задать радиус дуги, начальный и конечный угол, с помощью checkbox задается направление рисования и дополнительный checkbox определяет залита ли фигура или нет. Скрипт должен на основе вводимых данных строить дугу.</p>
         <div class="task1">
-            <div class="controls">
+            <canvas class="canvas_1" width="500" height="500"></canvas>
+
+            <form action="#" class="controls-arc">
+                <div>
+                    <label>Arc radius Ø </label>
+                    <input type="range" class="radius-inp" min="2" max="200" value="50">
+                </div>
                 
-            </div>
-            <canvas class="canvas_1" width="400" height="400"></canvas>
+                <div>
+                    <label>Start angle ∠ </label>
+                    <input type="range" class="start-angle-inp" min="0" max="360" value="0">
+                </div>
+
+                <div>
+                    <label>End angle ∠ </label>
+                    <input type="range" class="end-angle-inp" min="0" max="360" value="360">
+                </div>
+                <div>
+                    <label>Anticlockwise </label>
+                    <input type="checkbox" class="anticlockwise-inp">
+                </div>
+                <div>
+                    <label>Stroke </label>
+                    <input type="checkbox" class="stroke-inp">
+                </div>
+                <div>
+                    <label>Stroke color</label>
+                    <input type="color" class="stroke-color-inp">
+                </div>
+                <div>
+                    <label>Line width</label>
+                    <input type="range" class="line-width-inp" min="1" max="50" value="1">
+                </div>
+                <div>
+                    <label>Fill </label>
+                    <input type="checkbox" class="fill-inp">
+                </div>
+                <div>
+                    <label>Fill color</label>
+                    <input type="color" class="fill-color-inp">
+                </div>
+            </form>
         </div>
     </div>
     <hr>

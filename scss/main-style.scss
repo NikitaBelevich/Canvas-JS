@@ -17,3 +17,15 @@ canvas {
     // height: 250px;
     background-color: #ede8ff;
 }
+.task1 {
+    display: inline-flex;
+}
+.controls-arc {
+    margin-left: 20px;
+    label{
+        font-size: 14px;
+        font-weight: 700;
+        display: inline-block;
+        transform: translateY(-4px);
+    }
+}
