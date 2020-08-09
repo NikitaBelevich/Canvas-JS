@@ -93,3 +93,32 @@ function paintArc() {
     // TODO Дуга
 }
 
+
+// График синуса
+// Получили canvas
+let canvas2 = document.querySelector('.canvas_2');
+// Получили контекст этого canvas
+let ctx2 = canvas2.getContext('2d');
+const but2 = document.querySelector('.task2 button');
+
+let x2 = 0;
+let timer2;
+
+but2.addEventListener('click', paintSinChart);
+function paintSinChart() {
+    ctx2.beginPath();
+    let y = 100+50*Math.sin(x2);
+    // console.warn(x2);
+    // Если график выходит за границы холста, то очищаем его и начинаем сначала
+    if (x2 >= 52) {
+        ctx2.clearRect(0, 0, 400, 200);
+        x2 = 0;
+    } else {
+        x2 += 0.04;
+    }
+    ctx2.arc(x2 * 8, y, 1, 0, getRadians(360));
+    ctx2.fill();
+    timer2 = setTimeout(paintSinChart, 15);
+    ctx2.closePath();
+}
+

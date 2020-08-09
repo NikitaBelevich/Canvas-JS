@@ -33,3 +33,7 @@ canvas {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
 }
+
+.canvas_2 {
+  background: url("/img/setka.png");
+}
