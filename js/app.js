@@ -122,3 +122,49 @@ function paintSinChart() {
     ctx2.closePath();
 }
 
+// Спирограф
+// Получили canvas
+const canvas3 = document.querySelector('.canvas_3');
+// Получили контекст этого canvas
+const ctx3 = canvas3.getContext('2d');
+
+(() => {
+    const formSpiro = document.querySelector('.controls-spiro');
+    const R_LARGE_INP = formSpiro.querySelector('.big-radius-spiro');
+    const R_SMALL_INP = formSpiro.querySelector('.small-radius-spiro');
+    const diameter_inp = formSpiro.querySelector('.diam-spiro');
+
+    // Начальные значения для формул
+    let R = +R_LARGE_INP.value;
+    let r = +R_SMALL_INP.value;
+    let d = +diameter_inp.value;
+    let teta = 0;
+    let timer3;
+
+    // При изменении значений инпутов будем заново рисовать фигуру
+    formSpiro.addEventListener('input', (event) => {
+        const targetOut = event.target.nextElementSibling;
+        // Выводим рядом новое значение value
+        targetOut.textContent = event.target.value;
+        // При изменении значения инпутов очищаем сперва холст
+        ctx3.clearRect(0, 0, 600, 600);
+        // Считываем одновременно все 3 координаты
+        R = +R_LARGE_INP.value;
+        r = +R_SMALL_INP.value;
+        d = +diameter_inp.value;
+    });
+
+    spirograph();
+    function spirograph() {
+        ctx3.beginPath();
+        let x = (R - r) * Math.cos(teta) + d * Math.cos((R - r) * teta / r);
+        let y = (R - r) * Math.sin(teta) - d * Math.sin((R - r) * teta / r);
+        teta += 0.02;
+        ctx3.arc(300 + x, 300 + y, 1, 0, getRadians(360));
+        ctx3.fill();
+        ctx3.closePath();
+
+        timer3 = setTimeout(spirograph, 5);
+    }
+})();
+

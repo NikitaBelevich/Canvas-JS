@@ -33,3 +33,17 @@ canvas {
 .canvas_2 {
     background: url('/img/setka.png');
 }
+.canvas_3{
+    width: 600px;
+    height: 600px;
+}
+.controls-spiro {
+    font-size: 14px;
+    font-weight: 700;
+    > div {
+        max-width:200px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+ 
